@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 
 import { theme } from './shared/theme';
-import { Home, Book, User, Todo } from './pages';
+import { HomePage, BookPage, UserPage, TodoPage, NotFoundPage } from './pages';
 import { NavBar } from './shared/components';
 
 const Main: React.FC = () => (
@@ -10,11 +10,11 @@ const Main: React.FC = () => (
 		<NavBar />
 		<Router>
 			<Switch>
-				<Route path="/" exact component={Home} />
-
-				<Route path="/books" exact component={Book} />
-				<Route path="/users" exact component={User} />
-				<Route path="/todos" exact component={Todo} />
+				<Route path="/" exact component={HomePage} />
+				<Route path="/books" exact component={BookPage} />
+				<Route path="/users" exact component={UserPage} />
+				<Route path="/todos" exact component={TodoPage} />
+				<Route path="*" exact component={NotFoundPage} />
 			</Switch>
 		</Router>
 	</ThemeProvider>
