@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 type user = {
 	Username: string;
-	Password: string | null;
+	Password?: string;
 	Email: string;
 	Phone: string;
 };

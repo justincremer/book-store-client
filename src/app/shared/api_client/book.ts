@@ -1,10 +1,10 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-type book = {
+interface book {
 	Title: string;
 	Author: string;
 	Genre: string;
-};
+}
 
 interface BookService {
 	list(): AxiosResponse<any>;
