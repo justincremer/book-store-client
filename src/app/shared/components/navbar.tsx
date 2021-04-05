@@ -19,22 +19,47 @@ const NavLink = (props: { to: string; children: any }) => {
 	);
 };
 
-const RedirectButtons = () => (
-	<div>
-		<NavLink
-			to="/books"
-			children={<Button color="inherit">Books</Button>}
-		/>
-		<NavLink
-			to="/users"
-			children={<Button color="inherit">Users</Button>}
-		/>
-		<NavLink
-			to="/todos"
-			children={<Button color="inherit">Todos</Button>}
-		/>
-	</div>
-);
+const RedirectButtons = () => {
+	const p = '1rem';
+
+	return (
+		<div>
+			<NavLink
+				to="/books"
+				children={
+					<Button
+						color="inherit"
+						style={{ paddingLeft: p, paddingRight: p }}
+					>
+						Books
+					</Button>
+				}
+			/>
+			<NavLink
+				to="/users"
+				children={
+					<Button
+						color="inherit"
+						style={{ paddingLeft: p, paddingRight: p }}
+					>
+						Users
+					</Button>
+				}
+			/>
+			<NavLink
+				to="/todos"
+				children={
+					<Button
+						color="inherit"
+						style={{ paddingLeft: p, paddingRight: p }}
+					>
+						Todos
+					</Button>
+				}
+			/>
+		</div>
+	);
+};
 
 //TODO: move into api client
 const ensureAuthenticated = (): boolean => false;
